@@ -4,5 +4,5 @@ public class AboutUsPage {
 
 
 
-    deneme failure
+   // deneme failure
 }
