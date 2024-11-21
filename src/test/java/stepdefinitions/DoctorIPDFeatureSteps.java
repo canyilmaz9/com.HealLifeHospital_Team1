@@ -37,12 +37,12 @@ public class DoctorIPDFeatureSteps {
     public void as_a_doctor_verify_that_the_data_table_headers_are_visible() {
 
     }
-    @Then("As a doctor, verify that the Case ID\\/Patient ID column is sorted in descending order.")
+    @Then("As a doctor, verify that the Case ID-Patient ID column is sorted in descending order.")
     public void as_a_doctor_verify_that_the_case_id_patient_id_column_is_sorted_in_descending_order() {
 
     }
-    @Then("As a doctor, verify the number of patients displayed in the list.")
-    public void as_a_doctor_verify_the_number_of_patients_displayed_in_the_list() {
+    @Then("As a doctor, the number of patients displayed in the data table should be visible next to the {string} text below the table.")
+    public void as_a_doctor_the_number_of_patients_displayed_in_the_data_table_should_be_visible_next_to_the_text_below_the_table(String string) {
 
     }
     @Then("As a doctor, click on patient names or IPD numbers")
@@ -57,7 +57,7 @@ public class DoctorIPDFeatureSteps {
     public void as_a_doctor_verify_that_the_search_box_allows_searching_for_any_data_present_in_the_data_table() {
 
     }
-    @Then("As a doctor, access the patient details page through the hamburger menu under the Credit Limit \\($) text.")
+    @Then("As a doctor, access the patient details page through the hamburger menu under the Credit Limit text.")
     public void as_a_doctor_access_the_patient_details_page_through_the_hamburger_menu_under_the_credit_limit_$_text() {
 
     }

@@ -45,3 +45,8 @@
 2024-11-21 22:15:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-21 22:15:00 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
 2024-11-21 22:15:00 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-21 23:38:22 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-21 23:38:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-21 23:38:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-21 23:38:25 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-21 23:38:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
