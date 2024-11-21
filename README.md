@@ -165,6 +165,14 @@ Locate alinan element nerenin elementi oldugu aciklama satiri ile aciklanmali ||
 1. Herkes kendi adina birer branch olusturur.
   * `git branch <isim>`
 
+Nerede oldugunuzu görmek icin `git branch` komutunu kullanin.
+Branch degistirmek icin `git checkout <isim>` komutunut kullanin.
+
+Kodunuzu güncellemek icin main branch e checkout ile gecin
+Daha sonra `git pull` komutu ile kendinize cekin
+Kendi branchinizi checkout ile gecin ve `git merge yapin`
+
+
 2. sol üst ya da sag alt(mac için) panelde branch ismimizin yazili oldugu kisimdan
   * main'e tikliyoruz
   * update'e tikliyoruz
@@ -177,6 +185,8 @@ Locate alinan element nerenin elementi oldugu aciklama satiri ile aciklanmali ||
   * 'git commit -m "İsim/tarih/Yapilan Degisiklikler icin bir mesaj yazilir."'
     Örn >>> git commit -m "<Kendi isminiz>/02.07/loginClassEklendi"
 4. git push
+
+Eger push isleminden sonra Failed e-postasi alirsaniz bu demektir ki cakisma vardir.
 
 - Push icin Jenkins ile baglanti kuruldugundan belli saatlerde push islemi yapilacaktir.
 
