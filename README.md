@@ -157,6 +157,31 @@ Testlerle ilgili kaynak dosyalarını içerir.
 - **`pom.xml`**: Maven bağımlılıklarını ve proje yapılandırmalarını içerir.
 - **`README.md`**: Projeye dair açıklamaları içeren dosya.
 
+### **6. Projede Calisirken Dikkat Edilmesi Gerekenler**
+Locate alinan element nerenin elementi oldugu aciklama satiri ile aciklanmali || orn: Homepage>> LoginLink>> Email Text Box ||
+
+### Git
+***
+1. Herkes kendi adina birer branch olusturur.
+  * `git branch <isim>`
+
+2. sol üst ya da sag alt(mac için) panelde branch ismimizin yazili oldugu kisimdan
+  * main'e tikliyoruz
+  * update'e tikliyoruz
+  * sonra merge 'main' into 'branch ismi' yazan kısma tikliyoruz
+  * bu şekilde pull işlemini gerçekleştirmiş oluyoruz
+
+3. Yaptigi degisiklikleri kucuk commitlerle kendi branchinda saklar. Burada tavsiye edilen sadece sizin yaptiginiz degisikliklerin eklenmesidir.
+  * 'git add . kesinlikle kullanilMAMAli'
+  * 'git add (degisiklik yapilan yerin dosya yolu yani "path from content root" u)
+  * 'git commit -m "İsim/tarih/Yapilan Degisiklikler icin bir mesaj yazilir."'
+    Örn >>> git commit -m "<Kendi isminiz>/02.07/loginClassEklendi"
+4. git push
+
+
+
+
+
 #### **Önemli Bağımlılıklar:**
 ```xml
 <dependencies>
