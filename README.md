@@ -178,7 +178,7 @@ Locate alinan element nerenin elementi oldugu aciklama satiri ile aciklanmali ||
     Örn >>> git commit -m "<Kendi isminiz>/02.07/loginClassEklendi"
 4. git push
 
-
+- Push icin Jenkins ile baglanti kuruldugundan belli saatlerde push islemi yapilacaktir.
 
 
 
