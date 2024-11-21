@@ -1,4 +1,4 @@
-# ** draftCucumberProject **
+# ** com.HealLifeHospital_Team1 **
 
 ## 📚 Proje Hakkında
 Bu proje, **Selenium WebDriver**, **Cucumber**, ve **Java** kullanılarak UI test otomasyonu için tasarlanmış bir framework'tür. Framework, **Behavior-Driven Development (BDD)** yaklaşımını destekler ve yeniden kullanılabilir, modüler bir yapı sunar.
