@@ -7,7 +7,7 @@ import pages.AboutUsPage;
 import pages.AdminDashboardPage;
 
 public class AdminDashboardSteps {
-    private static final Logger logger = LogManager.getLogger(AboutUsSteps.class);
+    private static final Logger logger = LogManager.getLogger(AdminDashboardSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
     AdminDashboardPage adminDashboardPage = new AdminDashboardPage(driver);
 }

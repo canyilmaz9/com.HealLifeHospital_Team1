@@ -8,7 +8,7 @@ import pages.Gallery_ContactUsPage;
 
 public class Gallery_ContactUsSteps {
     public class AdminFrontOffice_HumanResourcesSteps {
-        private static final Logger logger = LogManager.getLogger(AboutUsSteps.class);
+        private static final Logger logger = LogManager.getLogger(AdminFrontOffice_HumanResourcesSteps.class);
         WebDriver driver = stepdefinitions.Hooks.getDriver();
         Gallery_ContactUsPage galleryContactUsPage = new Gallery_ContactUsPage(driver);
     }

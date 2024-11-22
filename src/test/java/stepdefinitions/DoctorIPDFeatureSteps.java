@@ -13,7 +13,7 @@ import utils.ExcelDataReader;
 
 public class DoctorIPDFeatureSteps {
 
-    private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
+    private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     WebDriver driver = Hooks.getDriver();
 DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);

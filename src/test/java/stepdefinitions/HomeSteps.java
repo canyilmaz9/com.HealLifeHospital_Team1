@@ -13,6 +13,7 @@ public class HomeSteps {
 
     private static final Logger logger = LogManager.getLogger(HomeSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
+   // HomePage homePage = new HomePage(driver);
     HomePage homePage = new HomePage(driver);
 
    @Given("Kullanici Anasayfa adresine gider")
