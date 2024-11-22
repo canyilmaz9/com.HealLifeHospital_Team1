@@ -10,4 +10,4 @@ public class Admin_BirthAndDeathRecord_FinancePage extends BasePage {
         PageFactory.initElements(driver, this);
 
     }
-}
+
