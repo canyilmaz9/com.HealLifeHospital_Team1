@@ -204,6 +204,18 @@ public class ReusableMethods {
         }
     }
 
+    public static boolean isTextVisible(String text) {
+        try {
+            // Metni içeren bir WebElement bul
+            WebElement element = driver.findElement(By.xpath("//*[text()='" + text + "']"));
+            // Bulunan elementin görünür olup olmadığını kontrol et
+            return isElementVisible(element);
+        } catch (Exception e) {
+            // Element bulunamazsa veya başka bir hata oluşursa false döndür
+            return false;
+        }
+    }
+
     public static WebElement getElementByText(WebDriver driver, String text) {
         return  driver.findElement(By.xpath("//*[text()='" + text + "']"));
     }
@@ -213,10 +225,8 @@ public class ReusableMethods {
     }
 
 
-    public static WebElement waitForElementVisibility(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-     //   WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[text()=' IPD Patient']")));
-        return wait.until(ExpectedConditions.visibilityOf(element));
+    public static void waitForElementVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
-
 }

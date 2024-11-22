@@ -2,14 +2,16 @@ package utils;
 
 import drivers.DriverManager;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.BasePage;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -18,6 +20,10 @@ import java.util.List;
 import java.util.Set;
 
 public class ReusableMethods {
+
+    static WebDriver driver=DriverManager.getDriver();
+    static Actions actions = new Actions(driver);
+
 
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
@@ -46,17 +52,7 @@ public class ReusableMethods {
     }
 
 
-    public static void bekle(int saniye){
 
-        try {
-            Thread.sleep(saniye*1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-
-
-    }
 
     public static List<String> getStringList(List<WebElement> kaynakList){
 
@@ -196,5 +192,41 @@ public class ReusableMethods {
 
     }
 
+    public static void clickWithText(String text) {
+
+        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();
+    }
+
+    public static boolean isElementVisible(WebElement element) {
+        try {
+
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static void waitForElementVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static boolean isTextVisible(String text) {
+        try {
+            // Metni içeren bir WebElement bul
+            WebElement element = driver.findElement(By.xpath("//*[text()='" + text + "']"));
+            // Bulunan elementin görünür olup olmadığını kontrol et
+            return isElementVisible(element);
+        } catch (Exception e) {
+            // Element bulunamazsa veya başka bir hata oluşursa false döndür
+            return false;
+        }
+    }
+
+    public static void waitForPageToLoad(long timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState")
+                .equals("complete"));
+    }
 
 }
