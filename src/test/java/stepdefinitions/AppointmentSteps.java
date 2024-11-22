@@ -7,7 +7,7 @@ import pages.AboutUsPage;
 import pages.AppointmentPage;
 
 public class AppointmentSteps {
-    private static final Logger logger = LogManager.getLogger(AboutUsSteps.class);
+    private static final Logger logger = LogManager.getLogger(AppointmentSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
     AppointmentPage appointmentPage = new AppointmentPage(driver);
 }
