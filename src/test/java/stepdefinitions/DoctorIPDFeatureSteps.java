@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class DoctorIPDFeatureSteps {
 
-    private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
+    private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     WebDriver driver = stepdefinitions.Hooks.getDriver();
 

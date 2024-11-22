@@ -7,7 +7,7 @@ import pages.AboutUsPage;
 import pages.Admin_IPDPage;
 
 public class Admin_IPDSteps {
-    private static final Logger logger = LogManager.getLogger(AboutUsSteps.class);
+    private static final Logger logger = LogManager.getLogger(Admin_IPDSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
     Admin_IPDPage admin_IPDPage = new Admin_IPDPage(driver);
 }
