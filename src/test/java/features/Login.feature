@@ -18,3 +18,5 @@ Feature: Login Functionality
           Given
           When
           Then
+          *
+          *
