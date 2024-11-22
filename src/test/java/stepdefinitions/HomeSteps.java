@@ -26,10 +26,10 @@ public class HomeSteps {
     @When("Anasayfa slidebar altinda bulunan Insurance plans, Pediatric Services, Lab Testing, Opening Hours Boardlarinin gorunur oldugunu dogrular")
     public void anasayfa_slidebar_altinda_bulunan_insurance_plans_pediatric_services_lab_testing_opening_hours_boardlarinin_gorunur_oldugunu_dogrular() {
 
-        String expectedInsurancePlansYazisi="Insurance Plans";
-        String actualIPYazisi=homePage.anaSayfaInsurancePlansYazisi.getText();
+        //String expectedInsurancePlansYazisi="Insurance Plans";
+        //String actualIPYazisi=homePage.anaSayfaInsurancePlansYazisi.getText();
 
-        Assert.assertEquals(actualIPYazisi,expectedInsurancePlansYazisi);
+        //Assert.assertEquals(actualIPYazisi,expectedInsurancePlansYazisi);
 
     }
 

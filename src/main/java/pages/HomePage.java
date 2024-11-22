@@ -1,5 +1,12 @@
 package pages;
 
+main
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+    public HomePage(WebDriver driver) {
+    }
+}
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
