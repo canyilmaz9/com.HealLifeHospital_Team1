@@ -1,8 +1,15 @@
 package pages;
 
-public class AboutUsPage {
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-   // deneme failure
 
-    //slack deneme
+public class AboutUsPage extends BasePage {
+    public AboutUsPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver,this);
+    }
+
+
+ 
 }
