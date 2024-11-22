@@ -1,14 +1,17 @@
 package utilities;
 
+
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import stepdefinitions.Hooks;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -17,6 +20,10 @@ import java.util.List;
 import java.util.Set;
 
 public class ReusableMethods {
+
+    static  WebDriver driver = Hooks.getDriver();
+
+     static Actions actions = new Actions(driver);
 
     public static void bekle(int saniye){
 
@@ -172,7 +179,7 @@ public class ReusableMethods {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         // TakesScreenshot is an interface of selenium that takes the screenshot
-        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         // full path to the screenshot location
         String target = System.getProperty("user.dir") + "/test-output/Screenshots/" + name + date + ".png";
@@ -180,5 +187,46 @@ public class ReusableMethods {
         // save the screenshot to the path given
         FileUtils.copyFile(source, finalDestination);
         return target;
+    }
+
+
+    public static void clickWithText(String text) {
+
+        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();
+    }
+
+    public static boolean isElementVisible(WebElement element) {
+        try {
+
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean isTextVisible(String text) {
+        try {
+            // Metni içeren bir WebElement bul
+            WebElement element = driver.findElement(By.xpath("//*[text()='" + text + "']"));
+            // Bulunan elementin görünür olup olmadığını kontrol et
+            return isElementVisible(element);
+        } catch (Exception e) {
+            // Element bulunamazsa veya başka bir hata oluşursa false döndür
+            return false;
+        }
+    }
+
+    public static WebElement getElementByText(WebDriver driver, String text) {
+        return  driver.findElement(By.xpath("//*[text()='" + text + "']"));
+    }
+    public static WebElement waitForElementToBeClickable(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+
+    public static void waitForElementVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

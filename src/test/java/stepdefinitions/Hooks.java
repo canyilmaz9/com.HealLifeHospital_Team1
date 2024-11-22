@@ -16,12 +16,14 @@ public class Hooks {
 	public void setUp(Scenario scenario) {
 		LoggerHelper.info("Test Başlıyor: " + scenario.getName());
 
-		// WebDriver başlat
-		driver = DriverManager.getDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		// Eğer driver zaten başlatılmadıysa başlat
+		if (driver == null) {
+			driver = DriverManager.getDriver(); // DriverManager üzerinden driver alınıyor
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-		LoggerHelper.info("Driver başlatıldı ve test hazırlandı.");
+			LoggerHelper.info("Driver başlatıldı ve test hazırlandı.");
+		}
 	}
 
 	@After
@@ -32,12 +34,23 @@ public class Hooks {
 			LoggerHelper.info("Test başarıyla tamamlandı: " + scenario.getName());
 		}
 
-		// WebDriver'ı kapat
-		DriverManager.quitDriver();
+		// Driver'ı kapat ve null yap
+		quitDriver();
 		LoggerHelper.info("Driver kapatıldı.");
 	}
 
 	public static WebDriver getDriver() {
+		// Driver null ise hata fırlat, çünkü başlatılmamış olabilir
+		if (driver == null) {
+			throw new IllegalStateException("Driver henüz başlatılmadı. 'setUp()' metodu çağrılmalı.");
+		}
 		return driver;
+	}
+
+	public static void quitDriver() {
+		if (driver != null) {
+			driver.quit();
+			driver = null; // Driver örneğini null yaparak belleği temizle
+		}
 	}
 }
