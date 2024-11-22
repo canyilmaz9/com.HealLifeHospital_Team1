@@ -31,18 +31,22 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[text()=' Dashboard']")
     public WebElement dashboardText;
 
+    @FindBy (xpath = "//*[text()=' IPD']")
+    public WebElement ipdLink;
+
+    @FindBy(xpath = "//*[text()=' IPD Patient']")
+    public WebElement ipdPatientText;
+
+
+
 
 
     public void doctorLogin(int rowAccessInfo) {
-        ExcelDataReader reader=new ExcelDataReader("src/test/resources/testData.xlsx", "loginBilgileri");
+        ExcelDataReader reader=new ExcelDataReader(ConfigReader.getProperty("testData"), "loginBilgileri");
 
         adminDoctorMail.sendKeys(reader.getCellData(rowAccessInfo, 4));
         adminPass.sendKeys(reader.getCellData(rowAccessInfo, 2));
         doctorSignIn.click();
-
-
-
-
 
     }
 

@@ -50,3 +50,98 @@
 2024-11-21 23:38:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-21 23:38:25 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
 2024-11-21 23:38:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:08:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:08:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:08:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:08:26 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 13:08:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:10:03 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:10:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:10:06 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:10:12 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 13:10:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:32:10 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:32:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:32:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:32:13 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 13:32:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:32:51 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:32:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:32:54 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:32:54 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 13:32:54 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:41:05 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:41:06 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:41:08 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:41:13 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 13:41:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:47:18 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:47:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:47:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:47:38 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 13:47:39 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:49:05 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:49:06 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:49:08 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:49:26 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 13:49:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 13:51:14 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 13:51:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 13:51:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 13:51:24 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 13:51:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:20:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:20:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:20:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:20:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:20:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:24:50 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:24:51 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:24:53 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:25:04 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:25:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:26:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:26:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:26:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:26:44 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:26:45 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:26:55 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:26:56 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:26:58 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:27:10 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:27:10 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:33:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:33:45 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:33:47 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:34:00 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:34:00 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:35:27 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:35:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:35:30 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:35:44 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:35:44 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:46:18 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:46:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:46:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:46:32 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:46:32 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:49:56 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:49:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:50:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:50:16 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:50:16 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:53:09 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:53:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:53:12 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:53:22 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:53:23 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 14:58:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 14:58:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 14:58:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 14:58:46 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
+2024-11-22 14:58:46 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-22 15:00:30 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-22 15:00:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that the patient list on the IPD page displayed
+2024-11-22 15:00:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-22 15:00:41 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that the patient list on the IPD page displayed
+2024-11-22 15:00:42 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

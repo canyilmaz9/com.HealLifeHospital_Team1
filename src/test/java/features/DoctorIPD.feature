@@ -1,11 +1,19 @@
-Feature:
-@ac
+
+
+Feature:As a doctor, they should be able to list data about inpatients from the IPD page and perform IPD patient procedures.
+  Background: Common Steps
+    Given Enters the "adminURL"
+    And  Login as doctor
+
+
+  @ac
+
   Scenario: Verify that the patient list on the IPD page displayed
-    Given As a doctor, navigate to the designated URL.
-    When As a doctor, verify access to the URL by checking the page title
+
+
     Then As a doctor, click on the IPD menu in the dashboard.
     * As a doctor,verify that the IPD menu is enabled.
-    * As a doctor, verify that the page displays the "IPD Patient" text, confirming the user is on the correct page.
+    * As a doctor, verify that the page displays the " IPD Patient".
     * As a doctor, verify that the data table headers are visible.
     * As a doctor, verify that the Case ID-Patient ID column is sorted in descending order.
     * As a doctor, the number of patients displayed in the data table should be visible next to the "Record" text below the table.

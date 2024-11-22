@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
@@ -15,35 +16,41 @@ public class DoctorIPDFeatureSteps {
 
     private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
-    WebDriver driver = Hooks.getDriver();
-DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
+   static WebDriver driver = Hooks.getDriver();
+    DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
 
   //  WebDriver driver = Hooks.getDriver(); // Hooks sınıfından driver alınır
  //   DoctorIDPPage doctorIDPPage = new DoctorIDPPage(driver); // Page'e driver gönderilir
 
 
-    @Given("As a doctor, navigate to the designated URL.")
-    public void as_a_doctor_navigate_to_the_designated_url() {
-        driver.get(ConfigReader.getProperty("adminURL"));
 
+    @Given("Enters the {string}")
+    public void enters_the(String url) {
+        driver.get(ConfigReader.getProperty(url));
         ReusableMethods.bekle(2);
+    }
+    @Given("Login as doctor")
+    public void login_as_doctor() {
         doctorIDPPage.doctorLogin(9);
     }
-    @When("As a doctor, verify access to the URL by checking the page title")
-    public void as_a_doctor_verify_access_to_the_url_by_checking_the_page_title() {
 
-    }
+
     @Then("As a doctor, click on the IPD menu in the dashboard.")
     public void as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
+
+
+        ReusableMethods.clickWithText(" IPD");
 
     }
     @Then("As a doctor,verify that the IPD menu is enabled.")
     public void as_a_doctor_verify_that_the_ipd_menu_is_enabled() {
 
+       Assert.assertTrue( doctorIDPPage.ipdLink.isEnabled());
     }
-    @Then("As a doctor, verify that the page displays the {string} text, confirming the user is on the correct page.")
-    public void as_a_doctor_verify_that_the_page_displays_the_text_confirming_the_user_is_on_the_correct_page(String string) {
-
+    @Then("As a doctor, verify that the page displays the {string}.")
+    public void as_a_doctor_verify_that_the_page_displays_the_text_confirming_the_user_is_on_the_correct_page(String elementText) {
+      ReusableMethods.waitForElementVisibility(ReusableMethods.getElementByText(driver,elementText),5);
+        Assert.assertTrue( ReusableMethods.getElementByText(driver,elementText).isDisplayed());
     }
     @Then("As a doctor, verify that the data table headers are visible.")
     public void as_a_doctor_verify_that_the_data_table_headers_are_visible() {
