@@ -1,5 +1,6 @@
 package pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -8,4 +9,6 @@ public class Admin_Billing_AppointmentPage extends BasePage{
         super(driver);
         PageFactory.initElements(driver, this);
     }
+
+
 }
