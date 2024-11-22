@@ -1,21 +1,33 @@
 package stepdefinitions;
 
+import config.ConfigReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import pages.DoctorIDPPage;
+import utilities.ReusableMethods;
+import utils.ExcelDataReader;
 
 public class DoctorIPDFeatureSteps {
 
     private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
 
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
+DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
+
+  //  WebDriver driver = Hooks.getDriver(); // Hooks sınıfından driver alınır
+ //   DoctorIDPPage doctorIDPPage = new DoctorIDPPage(driver); // Page'e driver gönderilir
+
 
     @Given("As a doctor, navigate to the designated URL.")
     public void as_a_doctor_navigate_to_the_designated_url() {
+        driver.get(ConfigReader.getProperty("adminURL"));
 
+        ReusableMethods.bekle(2);
+        doctorIDPPage.doctorLogin(9);
     }
     @When("As a doctor, verify access to the URL by checking the page title")
     public void as_a_doctor_verify_access_to_the_url_by_checking_the_page_title() {
