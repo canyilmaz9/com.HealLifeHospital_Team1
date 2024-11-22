@@ -23,6 +23,7 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "(//*[@class='he-title'])[4]")
     public WebElement openingHoursYazisi;
+    //
 
 
 }
