@@ -20,6 +20,9 @@ public class LoginPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(xpath = "//*[@id='email']")
+	public WebElement doktorLogInButton;
+
 	public void login(String username, String password) {
 		type(usernameInput, username);
 		type(passwordInput, password);
