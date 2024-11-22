@@ -1,13 +1,5 @@
 package pages;
 
-main
-import org.openqa.selenium.WebDriver;
-
-public class HomePage {
-    public HomePage(WebDriver driver) {
-    }
-}
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,9 +23,4 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "(//*[@class='he-title'])[4]")
     public WebElement openingHoursYazisi;
-    //
-
-    //dhliftg/;K,SAMUYRIEJR
-
-
 }
