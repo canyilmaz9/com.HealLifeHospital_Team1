@@ -17,7 +17,6 @@ Feature: US_004 Bir kullanici olarak hastaneye ait bilgilere kolay erisim icin a
       Then Anasayfaya geri doner
       Then Lab Testing yazisinda read more butonuna tiklar ve Acilan sayfada Lab Testing Services yazisinin oldugunu dogrular
 
-
   #US_019 Bir kullanici (hasta) olarak OPD bilgilerimi kontrol edebilmek icin Dashboard panelimde OPD menusunun olmasini istiyorum.
   Scenario: US_019>TC_003 Dashboard sidebar'inda OPD menü basliginin dogrulanmasi ve tiklaninca "opdprofile" sayfasina yönlendirmesi testi
     Given Kullanici Anasayfa adresine gider
@@ -40,8 +39,7 @@ Feature: US_004 Bir kullanici olarak hastaneye ait bilgilere kolay erisim icin a
     Then Patient verifies Treatment History button is enable and click it
     Then Patient verifies Timeline button is enable and click it
 
-  @homepage
-    Scenario: US_019>TC_005 Overview sayfasinda hastaya ait profil bilgilerinin dogru sekilde goruntulenmesi, Visits, Lab Investigation, Treatment History, Timeline bilgilerinin ozetlerinin goruntulenmesi, consultant doctor basligi altinda danisman doktorlarin goruntulenmesi testi
+  Scenario: US_019>TC_005 Overview sayfasinda hastaya ait profil bilgilerinin dogru sekilde goruntulenmesi, Visits, Lab Investigation, Treatment History, Timeline bilgilerinin ozetlerinin goruntulenmesi, consultant doctor basligi altinda danisman doktorlarin goruntulenmesi testi
     Given  Kullanici Anasayfa adresine gider
     When Patient clicks the login button
     And Patient logins to patient dashboard
@@ -49,10 +47,22 @@ Feature: US_004 Bir kullanici olarak hastaneye ait bilgilere kolay erisim icin a
     Then Patient verifies her name on the header
     Then Patient verifes Consultant doctors found
     Then Patient verifies that can be seen details about appointment under the visit details section
-    Then Patient verifies that can be seen details about lab investigetion summary under the lab investigation section
+    Then Patient verifies that can be seen details about lab investigation summary under the lab investigation section
     And Patient verifies that can be seen details about treatments under the treatments history section
     And Patient verifies that can be seen details about timeline records under the Timeline section
 
+
+  @homepage
+Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appointment Date, Consultant, Reference, Syptomps,Action) basliklari ve text boxin olmasi ve burada arama yapilabilmesi, listede siralama yapilabilmesi testi
+    Given Kullanici Anasayfa adresine gider
+    When Patient clicks the login button
+    And Patient logins to patient dashboard
+    And Patient clicks to OPD button on the left side bar menu
+    Then Patient verifies Visits button is enable and click it
+    Then Patient verifies OPD No header
+    Then Patient verifies Case IDyi on the header
+    Then Patient verifies Threatment History header
+    Then Patient Timeline header
 
 
 

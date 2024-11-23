@@ -86,8 +86,50 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@class='scrtabs-tabs-movable-container']/ul/li[5]/a")
     public WebElement OPDtimelineButton;
 
+
     //US019>TC_005 Locations
 
+    @FindBy (xpath = "(//*[@class='text-uppercase bolds mt0 ptt10 pull-left font14'])[1]")
+    public WebElement OPDHeaderHastaAdi;
+
+    @FindBy (xpath = "(//*[@class='media-heading'])[1]")
+    public WebElement doctorsName;
+
+    @FindBy (xpath = "//*[@id=\"overview\"]/div/div[2]/div[1]/div/div[2]/div/table/tbody/tr[1]/td[1]")
+    public WebElement visitDetails;
+
+    @FindBy (xpath = "(//*[@class='staff-members'])[4]")
+    public WebElement labInvestigationDetails;
+
+    @FindBy (xpath = "(//*[@class='staff-members'])[5]")
+    public WebElement treatmentHistoryDetails;
+
+    @FindBy (xpath = "(//*[@class='timeline-header text-aqua'])[1]")
+    public WebElement TimelineDetails;
+
+
+    //US019>TC_006 Locations
+
+    @FindBy (xpath = "(//*[@class='sorting'])[1]")
+    public WebElement visitsOPDNo;
+
+    @FindBy (xpath = "(//*[@class='sorting'])[2]")
+    public WebElement caseID;
+
+    @FindBy (xpath = "(//*[@class='sorting'])[3]")
+    public WebElement appointmentDate;
+
+    @FindBy (xpath = "(//*[@class='sorting'])[4]")
+    public WebElement consultant;
+
+    @FindBy (xpath = "(//*[@class='sorting'])[5]")
+    public WebElement reference;
+
+    @FindBy (xpath = "(//*[@class='sorting'])[6]")
+    public WebElement sympthoms;
+
+    @FindBy (xpath = "//*[@class='text-right noExport sorting_asc']")
+    public WebElement action;
 
     }
 
