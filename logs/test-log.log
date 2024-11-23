@@ -286,3 +286,123 @@
 2024-11-22 20:55:10 [main] ERROR stepdefinitions.DoctorIPDFeatureSteps - IPD hasta listesindeki tüm datalarla arama yapilamiyor 
 2024-11-22 20:55:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Verify that the patient list on the IPD page displayed
 2024-11-22 20:55:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:00:39 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele dogru bilgilerle login olma
+2024-11-23 20:00:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:00:44 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:00:44 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:00:44 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:00:44 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:00:46 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:00:46 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:00:46 [main] INFO  stepdefinitions.GoogleSteps - user login sayfasinda sagda login penceresi solda latest new bilgileri bulundu
+2024-11-23 20:00:50 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Dashboard panele dogru bilgilerle login olma
+2024-11-23 20:00:50 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:22:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:22:17 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:23:05 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:23:05 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:23:05 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:23:05 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:23:07 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:23:07 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:23:07 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:23:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:23:28 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 20:23:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele dogru bilgilerle login olma
+2024-11-23 20:23:30 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:23:33 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:23:33 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:23:33 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:23:33 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:24:19 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:24:19 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:24:19 [main] INFO  stepdefinitions.GoogleSteps - user login sayfasinda sagda login penceresi solda latest new bilgileri bulundu
+2024-11-23 20:24:23 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Dashboard panele dogru bilgilerle login olma
+2024-11-23 20:24:23 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:24:49 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 20:24:50 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:24:51 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:24:54 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:24:54 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:24:54 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:24:54 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:24:55 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:24:55 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:25:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:25:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:26:16 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 20:26:16 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:26:17 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:26:20 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:26:20 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:26:20 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:26:20 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:27:07 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:27:07 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:27:07 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:27:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 20:30:56 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 20:30:56 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:30:57 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 20:31:00 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 20:31:00 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 20:31:00 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 20:31:00 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 20:31:02 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 20:31:02 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 20:31:03 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 20:31:03 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 21:12:51 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 21:12:51 [main] INFO  utils.LoggerHelper - Test Başlıyor: 
+2024-11-23 21:12:53 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 21:12:56 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 21:12:56 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 21:12:56 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 21:12:56 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 21:12:58 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 21:12:58 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 21:12:58 [main] INFO  stepdefinitions.GoogleSteps - user login sayfasinda Forgot Password butonu goruntulendi
+2024-11-23 21:12:58 [main] INFO  stepdefinitions.GoogleSteps - Forgot Password butonu tiklandi
+2024-11-23 21:12:58 [main] INFO  stepdefinitions.GoogleSteps - ufpassword sayfasina yönlendirildigi dogrulandi
+2024-11-23 21:12:58 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: 
+2024-11-23 21:12:58 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 22:10:42 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 22:10:42 [main] INFO  utils.LoggerHelper - Test Başlıyor: 
+2024-11-23 22:10:43 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 22:10:46 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 22:10:46 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 22:10:46 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 22:10:46 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 22:11:33 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 22:11:33 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 22:11:33 [main] INFO  stepdefinitions.GoogleSteps - user login sayfasinda Forgot Password butonu goruntulendi
+2024-11-23 22:11:33 [main] INFO  stepdefinitions.GoogleSteps - Forgot Password butonu tiklandi
+2024-11-23 22:11:33 [main] INFO  stepdefinitions.GoogleSteps - ufpassword sayfasina yönlendirildigi dogrulandi
+2024-11-23 22:11:34 [main] ERROR stepdefinitions.GoogleSteps - Isleme dair herhangi bir alert box vb. cikmiyor. Mail gondermiyor ve submit butonu tiklandiginda login sayfasina donuyor.
+2024-11-23 22:11:34 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: 
+2024-11-23 22:11:35 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-23 23:39:48 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-23 23:39:49 [main] INFO  utils.LoggerHelper - Test Başlıyor: Valid Login
+2024-11-23 23:39:51 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-23 23:39:51 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele dogru bilgilerle login olma
+2024-11-23 23:39:54 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 23:39:54 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 23:39:54 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 23:39:54 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 23:39:55 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 23:39:55 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 23:39:55 [main] INFO  stepdefinitions.GoogleSteps - user login sayfasinda sagda login penceresi solda latest new bilgileri bulundu
+2024-11-23 23:39:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: Dashboard panele yanlis bilgilerle login olamama
+2024-11-23 23:39:59 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 23:39:59 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 23:39:59 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 23:39:59 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 23:40:00 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 23:40:00 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
+2024-11-23 23:40:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: 
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasına gidildi: https://qa.heallifehospital.com/
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Heal Life Hospital ana sayfasında oldugu dogrulandi
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu goruntulendi
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklanabilirligi dogrulandi
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Ana sayfada login butonu tiklandi
+2024-11-23 23:40:15 [main] INFO  stepdefinitions.GoogleSteps - Login page sayfasına gidildigi dogrulandi: https://qa.heallifehospital.com/site/userlogin
