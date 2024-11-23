@@ -72,4 +72,57 @@ public class LoginSteps {
 
 
 	}
+
+	@And("username kutusuna dogru email, password kutusuna yanlis sifre girilerek sign in butonuna tiklanir.")
+	public void usernameKutusunaDogruEmailPasswordKutusunaYanlisSifreGirilerekSignInButonunaTiklanir() {
+		loginPage.setLogin(ConfigReader.getProperty("patientUsername"),"yanlisSifre");
+	}
+
+	@Then("Kullanicinin giris yapamadigi dogrulanir")
+	public void kullanicininGirisYapamadigiDogrulanir() {
+		loginPage.invalidLoginAlert.isDisplayed();
+	}
+
+	@And("username kutusuna yanlis email, password kutusuna dogru sifre girilerek sign in butonuna tiklanir.")
+	public void usernameKutusunaYanlisEmailPasswordKutusunaDogruSifreGirilerekSignInButonunaTiklanir() {
+		loginPage.setLogin("yanlisKullaniciadi",ConfigReader.getProperty("patientPassword"));
+	}
+
+
+	@And("username kutusuna yanlis email, password kutusuna yanlis sifre girilerek sign in butonuna tiklanir.")
+	public void usernameKutusunaYanlisEmailPasswordKutusunaYanlisSifreGirilerekSignInButonunaTiklanir() {
+		loginPage.setLogin("yanlisKullaniciadi","yanlisSifre");
+
+	}
+
+	@Then("User Login sayfasinda forget password linki bulunmali ve bu linke tiklaninca ufpassword sayfasina yönlendirmeli.")
+	public void userLoginSayfasindaForgetPasswordLinkiBulunmaliVeBuLinkeTiklanincaSayfasinaYönlendirmeli() {
+		loginPage.forgotPasswordBox.isDisplayed();
+		logger.info("user login sayfasinda Forgot Password butonu goruntulendi" );
+		loginPage.forgotPasswordBox.click();
+		logger.info("Forgot Password butonu tiklandi" );
+		String exceptedUrl = "https://qa.heallifehospital.com/site/ufpassword";
+		Assert.assertEquals(exceptedUrl,driver.getCurrentUrl());
+		logger.info("ufpassword sayfasina yönlendirildigi dogrulandi" );
+	}
+
+	@And("Forgot password sayfasinda parola sifirlama islemi icin ilgili textBox'a mail adresi girilebilmeli")
+	public void forgotPasswordSayfasindaParolaSifirlamaIslemiIcinIlgiliTextBoxAMailAdresiGirilebilmeli() {
+		loginPage.forgotPasswordMailBox.isDisplayed();
+		loginPage.forgotPasswordMailBox.sendKeys(ConfigReader.getProperty("patientEmail"));
+		loginPage.submitButton.click();
+	}
+
+	@And("Forgot password sayfasindaki textBox'a girilen mail adresine sifre gönderilmeli.")
+	public void forgotPasswordSayfasindakiTextBoxAGirilenMailAdresineSifreGönderilmeli() {
+		logger.error("Isleme dair herhangi bir alert box vb. cikmiyor. Mail gondermiyor ve submit butonu tiklandiginda " +
+				"login sayfasina donuyor.");
+	}
+
+	@Then("Forgot password sayfasinda login sayfasina dönmek icin user login linki bulunmali ve bu linke tiklaninca userlogin sayfasina yönlendirmeli.")
+	public void forgotPasswordSayfasindaLoginSayfasinaDönmekIcinUserLoginLinkiBulunmaliVeBuLinkeTiklanincaSayfasinaYönlendirmeli() {
+		loginPage.forgotPasswordBox.click();
+		loginPage.ufpasswordPageUserLoginBtn.isDisplayed();
+		loginPage.ufpasswordPageUserLoginBtn.click();
+	}
 }

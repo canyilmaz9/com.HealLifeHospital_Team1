@@ -62,5 +62,19 @@ public class LoginPage extends BasePage {
 		click(signInButton);
 	}
 
+	@FindBy(xpath = "//*[@class=\"alert alert-danger\"]")
+	public WebElement invalidLoginAlert;
+
+	@FindBy(xpath = "//*[@class=\"forgot\"]")
+	public WebElement forgotPasswordBox;
+
+	@FindBy(xpath = "//*[@type=\"text\"]")
+	public WebElement forgotPasswordMailBox;
+
+	@FindBy(className = "btn")
+	public WebElement submitButton;
+
+	@FindBy(className = "forgot")
+	public WebElement ufpasswordPageUserLoginBtn;
 }
 
