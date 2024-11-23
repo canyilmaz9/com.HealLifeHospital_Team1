@@ -23,7 +23,7 @@ public class ReusableMethods {
 
     static  WebDriver driver = Hooks.getDriver();
 
-     static Actions actions = new Actions(driver);
+    static Actions actions = new Actions(driver);
 
     public static void bekle(int saniye){
 
