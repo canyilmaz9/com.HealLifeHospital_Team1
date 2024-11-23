@@ -12,6 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePageGeneralPage;
 import utilities.ReusableMethods;
 
+import javax.sound.midi.Soundbank;
+
 public class HomePageGeneralSteps {
 
     private static final Logger logger = LogManager.getLogger(HomePageGeneralSteps.class);
@@ -33,7 +35,7 @@ public class HomePageGeneralSteps {
     public void anasayfa_slidebar_altinda_bulunan_insurance_plans_yazisinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedInsurancePlansYazisi="Insurance Plans";
         String actualIPYazisi=homePageGeneralPage.anaSayfaInsurancePlansYazisi.getText();
-        Assert.assertEquals(actualIPYazisi,expectedInsurancePlansYazisi);
+        Assert.assertEquals(expectedInsurancePlansYazisi,actualIPYazisi);
         System.out.println(actualIPYazisi);
         Thread.sleep(3000);
 
@@ -43,7 +45,7 @@ public class HomePageGeneralSteps {
     public void pediatric_services_yazisinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedPediatricServiceYazisi="Pediatric Services";
         String actualPSYazisi=homePageGeneralPage.pediatricServiceYazisi.getText();
-        Assert.assertEquals(actualPSYazisi,expectedPediatricServiceYazisi);
+        Assert.assertEquals(expectedPediatricServiceYazisi,actualPSYazisi);
         System.out.println(actualPSYazisi);
         Thread.sleep(3000);
     }
@@ -51,7 +53,7 @@ public class HomePageGeneralSteps {
     public void lab_testing_boardunun_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedLabTesting="Lab Testing";
         String actualLTYazisi=homePageGeneralPage.labTestingYazisi.getText();
-        Assert.assertEquals(actualLTYazisi,expectedLabTesting);
+        Assert.assertEquals(expectedLabTesting,actualLTYazisi);
         System.out.println(actualLTYazisi);
         Thread.sleep(3000);
     }
@@ -59,7 +61,7 @@ public class HomePageGeneralSteps {
     public void opening_hours_boardlarinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedOpeningHours="Opening Hours";
         String actualOpeningHours=homePageGeneralPage.openingHoursYazisi.getText();
-        Assert.assertEquals(actualOpeningHours,expectedOpeningHours);
+        Assert.assertEquals(expectedOpeningHours,actualOpeningHours);
         System.out.println(actualOpeningHours);
         Thread.sleep(3000);
 
@@ -74,7 +76,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.insurancePlansReadMoreButonu.click();
         String expectedInsurancePlansKontrolYazisi="Insurance Plans";
         String actualInsurancePlansKontrolYazisi=homePageGeneralPage.insurancePlansSayfasiKontrolYazisi.getText();
-        Assert.assertEquals(actualInsurancePlansKontrolYazisi,expectedInsurancePlansKontrolYazisi);
+        Assert.assertEquals(expectedInsurancePlansKontrolYazisi,actualInsurancePlansKontrolYazisi);
         System.out.println(actualInsurancePlansKontrolYazisi);
         Thread.sleep(3000);
 
@@ -85,7 +87,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.pediatricServicesReadMoreButonu.click();
         String expectedPediatricServicesKontrolYazisi="Our Pediatric Services:";
         String actualPediatrciServicesKontrolYazisi=homePageGeneralPage.pediatricServicesKontrolYazisi.getText();
-        Assert.assertEquals(actualPediatrciServicesKontrolYazisi,expectedPediatricServicesKontrolYazisi);
+        Assert.assertEquals(expectedPediatricServicesKontrolYazisi,actualPediatrciServicesKontrolYazisi);
         System.out.println(actualPediatrciServicesKontrolYazisi);
 
 
@@ -101,7 +103,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.labTestingReadMoreButonu.click();
         String expectedLabTestingSayfasiYazisi="Lab Testing Services:";
         String actualLabTestingSayfasiYazisi=homePageGeneralPage.labTestingSayfasiKontrolYazisi.getText();
-        Assert.assertEquals(actualLabTestingSayfasiYazisi,expectedLabTestingSayfasiYazisi);
+        Assert.assertEquals(expectedLabTestingSayfasiYazisi,actualLabTestingSayfasiYazisi);
         System.out.println(actualLabTestingSayfasiYazisi);
         Thread.sleep(3000);
 
@@ -130,7 +132,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_the_opd_button_is_enable() throws InterruptedException {
         String expectedOPDYazisi="OPD";
         String actualOPDYazisi=homePageGeneralPage.dashboardaGirisdogrulamaButonu.getText();
-        Assert.assertEquals(actualOPDYazisi,expectedOPDYazisi);
+        Assert.assertEquals(expectedOPDYazisi,actualOPDYazisi);
         System.out.println(actualOPDYazisi);
         Thread.sleep(1000);
 
@@ -145,7 +147,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_the_opd_page_opens() throws InterruptedException {
         String expectedOverviewYazisi="Overview";
         String actualOverviewYazisi= homePageGeneralPage.OPDDashboardDogrulamaYazisiOverview.getText();
-        Assert.assertEquals(actualOverviewYazisi,expectedOverviewYazisi);
+        Assert.assertEquals(expectedOverviewYazisi,actualOverviewYazisi);
         System.out.println(actualOverviewYazisi);
         Thread.sleep(1000);
 
@@ -158,7 +160,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_overview_button_is_enable() throws InterruptedException {
         String expectedOverviewYazisi="Overview";
         String actualOverviewYazisi= homePageGeneralPage.OPDDashboardDogrulamaYazisiOverview.getText();
-        Assert.assertEquals(actualOverviewYazisi,expectedOverviewYazisi);
+        Assert.assertEquals(expectedOverviewYazisi,actualOverviewYazisi);
         System.out.println(actualOverviewYazisi);
         Thread.sleep(1000);
 
@@ -167,7 +169,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_visits_button_is_enable_and_click_it() throws InterruptedException {
         String expectedVisitsYazisi="Visits";
         String actualVisitsYazisi=homePageGeneralPage.OPDVisitsButton.getText();
-        Assert.assertEquals(actualVisitsYazisi,expectedVisitsYazisi);
+        Assert.assertEquals(expectedVisitsYazisi,actualVisitsYazisi);
         System.out.println(actualVisitsYazisi);
         homePageGeneralPage.OPDVisitsButton.click();
         Thread.sleep(1000);
@@ -177,7 +179,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_lab_investigation_button_is_enable_and_click_it() throws InterruptedException {
         String expectedLabInvestigationYazisi="Lab Investigation";
         String actualLabInvestigationYazisi=homePageGeneralPage.OPDLabInvestigationButton.getText();
-        Assert.assertEquals(actualLabInvestigationYazisi,expectedLabInvestigationYazisi);
+        Assert.assertEquals(expectedLabInvestigationYazisi,actualLabInvestigationYazisi);
         System.out.println(actualLabInvestigationYazisi);
         homePageGeneralPage.OPDLabInvestigationButton.click();
         Thread.sleep(1000);
@@ -187,7 +189,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_treatment_history_button_is_enable_and_click_it() throws InterruptedException {
         String expectedTreatmentHistoryYazisi="Treatment History";
         String actualTreatmentHistoryYazisi=homePageGeneralPage.OPDtreatmentHistoryButton.getText();
-        Assert.assertEquals(actualTreatmentHistoryYazisi,expectedTreatmentHistoryYazisi);
+        Assert.assertEquals(expectedTreatmentHistoryYazisi,actualTreatmentHistoryYazisi);
         System.out.println(actualTreatmentHistoryYazisi);
         homePageGeneralPage.OPDtreatmentHistoryButton.click();
         Thread.sleep(1000);
@@ -197,7 +199,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_timeline_button_is_enable_and_click_it() throws InterruptedException {
         String expectedTimelineButton="Timeline";
         String actualTimelineButton=homePageGeneralPage.OPDtimelineButton.getText();
-        Assert.assertEquals(actualTimelineButton,expectedTimelineButton);
+        Assert.assertEquals(expectedTimelineButton,actualTimelineButton);
         System.out.println(actualTimelineButton);
         homePageGeneralPage.OPDtimelineButton.click();
         Thread.sleep(1000);
@@ -208,27 +210,81 @@ public class HomePageGeneralSteps {
 
     @Then("Patient verifies her name on the header")
     public void patient_verifies_her_name_on_the_header() {
+        String expectedOPDHeaderName="RANA NUR ULKER (79)";
+        String actualOPDHeaderName=homePageGeneralPage.OPDHeaderHastaAdi.getText();
+        Assert.assertEquals(expectedOPDHeaderName,actualOPDHeaderName);
+        System.out.println("Hasta adinin dogru oldugu dogrulandi.");
 
     }
     @Then("Patient verifes Consultant doctors found")
     public void patient_verifes_consultant_doctors_found() {
-
+        String expectedDoctorsName="No Record Found";
+        String actualDoctorsname=homePageGeneralPage.doctorsName.getText();
+        Assert.assertNotEquals(expectedDoctorsName,actualDoctorsname);
+        System.out.println("Doktor isimlerinin listelendigi goruldu.");
     }
+
     @Then("Patient verifies that can be seen details about appointment under the visit details section")
     public void patient_verifies_that_can_be_seen_details_about_appointment_under_the_visit_details_section() {
+        String expectedVisitDetails="No Record Found";
+        String actualVisitDetails=homePageGeneralPage.visitDetails.getText();
+        Assert.assertNotEquals(expectedVisitDetails,actualVisitDetails);
+        System.out.println("Hasta appointment detaylarini goruntuler");
 
     }
-    @Then("Patient verifies that can be seen details about lab investigetion summary under the lab investigation section")
-    public void patient_verifies_that_can_be_seen_details_about_lab_investigetion_summary_under_the_lab_investigation_section() {
+   @Then("Patient verifies that can be seen details about lab investigation summary under the lab investigation section")
+   public void patient_verifies_that_can_be_seen_details_about_lab_investigetion_summary_under_the_lab_investigation_section() {
+       String expectedLabInvestigation="OPD No";
+       String actualLabInvestigation=homePageGeneralPage.labInvestigationDetails.getText();
+       Assert.assertEquals(expectedLabInvestigation,actualLabInvestigation);
+       System.out.println("Lab investigation details gorulur");
 
-    }
-    @Then("Patient verifies that can be seen details about treatments under the treatments history section")
-    public void patient_verifies_that_can_be_seen_details_about_treatments_under_the_treatments_history_section() {
+   }
+   @Then("Patient verifies that can be seen details about treatments under the treatments history section")
+   public void patient_verifies_that_can_be_seen_details_about_treatments_under_the_treatments_history_section() {
+       String expectedTreatmentsDetails="OPD No";
+       String actualTreatmentDetails=homePageGeneralPage.treatmentHistoryDetails.getText();
+       Assert.assertEquals(expectedTreatmentsDetails,actualTreatmentDetails);
+       System.out.println("Hasta ilac gecmisine bakar");
 
-    }
+
+   }
     @Then("Patient verifies that can be seen details about timeline records under the Timeline section")
     public void patient_verifies_that_can_be_seen_details_about_timeline_records_under_the_timeline_section() {
+        actions.scrollToElement(homePageGeneralPage.TimelineDetails);
+        String expectedTimeLine="Timeline deneme";
+        String actualTimeLine=homePageGeneralPage.TimelineDetails.getText();
+        Assert.assertEquals(expectedTimeLine,actualTimeLine);
+        System.out.println("Timeline akisi gozukur");
+    }
+
+    //US_009>TC006 Step Definitions
+
+    @Then("Patient verifies OPD No header")
+    public void patient_verifies_opd_no_header() {
+        String expectedVisitsOPDNo="OPD No";
+        String actualVisitsOPDNo=homePageGeneralPage.visitsOPDNo.getText();
+        Assert.assertEquals(expectedVisitsOPDNo,actualVisitsOPDNo);
+        System.out.println("OPD No goruldu");
 
     }
+    @Then("Patient verifies Lab Investigation header")
+    public void patient_verifies_lab_investigation_header() {
+        System.out.println("Investigation goruldu");
+
+
+    }
+    @Then("Patient verifies Threatment History header")
+    public void patient_verifies_threatment_history_header() {
+        System.out.println("Threatment history goruldu");
+
+    }
+    @Then("Patient Timeline header")
+    public void patient_timeline_header() {
+
+
+    }
+
+
 
 }
