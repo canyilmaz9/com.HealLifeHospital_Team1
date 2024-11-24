@@ -1,1 +1,21 @@
 
+2024-11-24 12:52:55 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-24 12:52:56 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:53:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-24 12:53:10 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:53:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-24 12:54:22 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-24 12:54:22 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:54:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-24 12:54:38 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:54:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-24 12:57:14 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-24 12:57:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:57:17 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-24 12:57:27 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:57:27 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-24 12:58:58 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-24 12:58:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:59:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-24 12:59:12 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-24 12:59:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

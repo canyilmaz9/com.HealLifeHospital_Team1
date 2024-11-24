@@ -104,79 +104,75 @@ public class DoctorIPDFeatureSteps {
 
     }
 
-     @Given("Clicking on the IPD No Column Nu 3 navigates to the patient's details page")
+     @Given("Clicking on the IPD No Column Nu 3 navigates to the patient's details page.")
      public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page() {
      doctorIDPPage.IPDN36Patient.click();
 
      }
      @When("As a doctor, verify that the page displays and click the {string}.")
      public void the_nurse_notes_page_displays_accurate_nurse_notes(String clickableText) {
-     ReusableMethods.bekle(2);
+
      ReusableMethods.clickWithText(clickableText);
      Assert.assertTrue(doctorIDPPage.nurseNote.isDisplayed());
 
      }
-     @When("The Medication page displays medication history correctly")
+     @When("The Medication page displays medication history correctly.")
      public void the_medication_page_displays_medication_history_correctly() {
-    // doctorIDPPage.verifyMedicineButtonAccessible();
-     }
-     @When("The Medication page allows adding new medications \\(Bug exists)")
-     public void the_medication_page_allows_adding_new_medications_bug_exists() {
 
+     doctorIDPPage.verifyMedicineButtonAccessible();
      }
-     @When("The Prescription page displays patient prescriptions")
+     @When("The Prescription page displays patient prescriptions.")
      public void the_prescription_page_displays_patient_prescriptions() {
-
+     ReusableMethods.clickWithText(" Prescription");
+     Assert.assertTrue(ReusableMethods.isTextVisible(" Prescription"));
      }
-     @When("The Prescription page allows writing new prescriptions")
+     @When("The Prescription page allows writing new prescriptions.")
      public void the_prescription_page_allows_writing_new_prescriptions() {
-
+     ReusableMethods.clickWithText(" Add Prescription");
+     Assert.assertTrue(ReusableMethods.isTextVisible(" Add Prescription"));
      }
-     @When("The Consultant Register page lists all consultant records")
+     @When("The Consultant Register page lists all consultant records.")
      public void the_consultant_register_page_lists_all_consultant_records() {
-
+     ReusableMethods.clickWithText(" Consultant Register");
+      Assert.assertTrue(ReusableMethods.isTextVisible(" Consultant Register"));
      }
-     @When("The Lab Investigation page lists all lab investigations")
+     @When("The Lab Investigation page lists all lab investigations.")
      public void the_lab_investigation_page_lists_all_lab_investigations() {
-
+      Assert.assertTrue(ReusableMethods.isTextVisible(" Lab Investigation"));
      }
-     @When("The Operations page lists all patient operations")
+     @When("The Operations page lists all patient operations.")
      public void the_operations_page_lists_all_patient_operations() {
-
+      Assert.assertTrue(ReusableMethods.isTextVisible(" Operations"));
      }
-     @When("The Operations page allows adding new operation records \\(Bug exists)")
-     public void the_operations_page_allows_adding_new_operation_records_bug_exists() {
-
-     }
-     @When("The Charges page displays detailed patient charges")
+     @When("The Charges page displays detailed patient charges.")
      public void the_charges_page_displays_detailed_patient_charges() {
-
+      Assert.assertTrue(ReusableMethods.isTextVisible(" Charges"));
      }
-     @When("The Charges page allows creating new charge records")
+     @When("The Charges page allows creating new charge records.")
      public void the_charges_page_allows_creating_new_charge_records() {
 
      }
-     @When("The Payment page lists all payment records")
+     @When("The Payment page lists all payment records.")
      public void the_payment_page_lists_all_payment_records() {
 
      }
-     @When("The Payment page allows adding new payments")
+     @When("The Payment page allows adding new payments.")
      public void the_payment_page_allows_adding_new_payments() {
 
      }
-     @When("The Bed History page shows detailed bed history")
+     @When("The Bed History page shows detailed bed history.")
      public void the_bed_history_page_shows_detailed_bed_history() {
 
      }
-     @When("The Timeline page displays future treatment plans")
+     @When("The Timeline page displays future treatment plans.")
      public void the_timeline_page_displays_future_treatment_plans() {
 
      }
-     @When("The Timeline page allows adding new treatment notes")
+     @When("The Timeline page allows adding new treatment notes.")
      public void the_timeline_page_allows_adding_new_treatment_notes() {
 
      }
-     @When("The Treatment History page lists all past treatments accurately")
+     @When("The Treatment History page lists all past treatments accurately.")
      public void the_treatment_history_page_lists_all_past_treatments_accurately() {
 
      }

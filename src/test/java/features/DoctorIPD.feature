@@ -30,24 +30,19 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 @ac
     Scenario: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
   Then As a doctor, click on the IPD menu in the dashboard.
-  Given Clicking on the IPD No Column Nu 3 navigates to the patient's details page
+  Given Clicking on the IPD No Column Nu 3 navigates to the patient's details page.
   And As a doctor, verify that the page displays and click the " Nurse Notes".
-  And The Medication page displays medication history correctly
-  And The Medication page allows adding new medications (Bug exists)
-  And The Prescription page displays patient prescriptions
-  And The Prescription page allows writing new prescriptions
-  And The Consultant Register page lists all consultant records
-  And The Lab Investigation page lists all lab investigations
-  And The Operations page lists all patient operations
-  And The Operations page allows adding new operation records (Bug exists)
-  And The Charges page displays detailed patient charges
-  And The Charges page allows creating new charge records
-  And The Payment page lists all payment records
-  And The Payment page allows adding new payments
-  And The Bed History page shows detailed bed history
-  And The Timeline page displays future treatment plans
-  And The Timeline page allows adding new treatment notes
-  And The Treatment History page lists all past treatments accurately
+  And As a doctor, verify that the page displays and click the " Medication".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
+  And As a doctor, verify that the page displays and click the " Nurse Notes".
 
 
 
