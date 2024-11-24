@@ -23,7 +23,7 @@ public class ReusableMethods {
 
     static  WebDriver driver = Hooks.getDriver();
 
-     static Actions actions = new Actions(driver);
+    static Actions actions = new Actions(driver);
 
     public static void bekle(int saniye){
 
@@ -230,6 +230,7 @@ public class ReusableMethods {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+
     public static void hoverOver(WebElement element) {
 
         actions.moveToElement(element).perform();
@@ -282,3 +283,6 @@ public class ReusableMethods {
 
 
 }
+
+}
+

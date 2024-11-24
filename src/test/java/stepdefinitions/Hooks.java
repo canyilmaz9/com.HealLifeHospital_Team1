@@ -38,7 +38,6 @@ public class Hooks {
 		quitDriver();
 		LoggerHelper.info("Driver kapatıldı.");
 	}
-
 	public static WebDriver getDriver() {
 		// Driver null ise hata fırlat, çünkü başlatılmamış olabilir
 		if (driver == null) {
