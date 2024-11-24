@@ -72,6 +72,10 @@
             <version>${log4j.version}</version>
         </dependency>
 
+
+
+
+
         <!-- WebDriver Manager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

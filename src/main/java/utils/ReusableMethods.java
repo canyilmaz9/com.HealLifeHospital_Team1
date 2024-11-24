@@ -229,4 +229,26 @@ public class ReusableMethods {
                 .equals("complete"));
     }
 
+    public static void hoverOver(WebElement element) {
+
+        actions.moveToElement(element).perform();
+    }
+
+    /**
+     * Sends TAB key press
+     */
+    public static void pressTab() {
+
+        actions.sendKeys(Keys.TAB).perform();
+    }
+
+    public static void hardWait(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
