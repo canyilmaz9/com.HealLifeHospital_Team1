@@ -222,7 +222,6 @@ ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty
         medicineButton.click();
 
         List<WebElement> medicinePageDataTableHeaderList=driver.findElements(By.xpath("(//table[contains(@class, 'table-striped')])[13]//th"));
-        List<WebElement> medicinePageTableDataList=driver.findElements(By.xpath("(//table[contains(@class, 'table-striped')])[13]//tr//td"));
 
         for (WebElement header: medicinePageDataTableHeaderList){
             if (header.getText().equals(reader.getCellData(1,1))) {
@@ -230,6 +229,17 @@ ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty
                 break;
             }
         }
+
+
+    }
+
+
+    public void addMedication(){
+            ReusableMethods.clickWithText(" Add Medication Dose");
+
+
+
+
 
 
     }
