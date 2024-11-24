@@ -1,19 +1,19 @@
 package pages;
 
 import config.ConfigReader;
-import io.cucumber.java.be.I;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.ExcelDataReader;
+
+import utils.ExcelCreator_seren;
+import utils.ExcelDataReader_Seren;
 import utils.ReusableMethods;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class DoctorIDPPage extends BasePage {
 
@@ -26,7 +26,7 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-
+ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
     @FindBy(xpath = "//*[@placeholder='Username']")
     public WebElement adminDoctorMail;
 
@@ -54,6 +54,21 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "(//*[@class='fa fa-reorder'])[2]")
     public WebElement hamburgerMenuIPD;
 
+    @FindBy(xpath = "//*[@id='name']")
+    public WebElement name;
+
+    @FindBy(xpath = "(//*[@class='timeline-header text-aqua'])[8]")
+    public WebElement nurseNote;
+
+    @FindBy(xpath = "//*[@href='#medication']")
+    public WebElement medicineButton;
+
+    @FindBy(xpath = "//a[normalize-space()='IPDN36']")
+    public WebElement IPDN36Patient;
+
+
+
+
 
 
 
@@ -67,9 +82,18 @@ public class DoctorIDPPage extends BasePage {
 
 
     public void doctorLogin(int rowAccessInfo) {
-        ExcelDataReader reader=new ExcelDataReader(ConfigReader.getProperty("testData"), "loginBilgileri");
+        ExcelDataReader_Seren reader=new ExcelDataReader_Seren(ConfigReader.getProperty("testData"), "loginBilgileri");
 
         adminDoctorMail.sendKeys(reader.getCellData(rowAccessInfo, 4));
+        adminPass.sendKeys(reader.getCellData(rowAccessInfo, 2));
+        doctorSignIn.click();
+
+    }
+
+    public void adminLogin(int rowAccessInfo) {
+        ExcelDataReader_Seren reader=new ExcelDataReader_Seren(ConfigReader.getProperty("testData"), "loginBilgileri");
+
+        adminDoctorMail.sendKeys(reader.getCellData(rowAccessInfo, 3));
         adminPass.sendKeys(reader.getCellData(rowAccessInfo, 2));
         doctorSignIn.click();
 
@@ -134,11 +158,13 @@ public class DoctorIDPPage extends BasePage {
 
     public WebElement TableDataRetriever(int row, int column){
 
-        WebElement data= driver.findElement(By.xpath("//tbody//tr["+row+"]//td["+column+"]"));
+      WebElement  data= driver.findElement(By.xpath("//tbody//tr[" +row+ "]//td[" +column+ "]"));
+      ReusableMethods.waitForElementVisibility(data,5);
 
-       return   data;
+        return   data;
 
     }
+
 
 
     public void clickPatientByIPDNo(String IPDNo){
@@ -165,14 +191,50 @@ public class DoctorIDPPage extends BasePage {
 
         //hoverover yap!
        ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),5);
-
-       ReusableMethods.waitForPageToLoad(5);
+       ReusableMethods.hoverOver(hamburgerMenuIPD);
+       ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,2);
         hamburgerMenuIPD.click();
         Assert.assertTrue(ReusableMethods.isTextVisible(" Nurse Notes"));
 
 
 
     }
+
+    public void verifyAddButtonAccessible(){
+
+        ReusableMethods.clickWithText("  Add Patient");
+        ReusableMethods.hardWait(1);
+        ReusableMethods.isTextVisible("New Patient");
+
+    }
+
+    public void verifyDischargedButtonAccessible(){
+
+        ReusableMethods.clickWithText(" Discharged Patient");
+        ReusableMethods.isTextVisible(" IPD Discharged Patient");
+
+    }
+
+
+    public void verifyMedicineButtonAccessible(){
+
+
+        medicineButton.click();
+
+        List<WebElement> medicinePageDataTableHeaderList=driver.findElements(By.xpath("(//table[contains(@class, 'table-striped')])[13]//th"));
+        List<WebElement> medicinePageTableDataList=driver.findElements(By.xpath("(//table[contains(@class, 'table-striped')])[13]//tr//td"));
+
+        for (WebElement header: medicinePageDataTableHeaderList){
+            if (header.getText().equals(reader.getCellData(1,1))) {
+                Assert.assertTrue(true);
+                break;
+            }
+        }
+
+
+    }
+
+
 
 
 }

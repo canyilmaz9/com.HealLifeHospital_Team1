@@ -192,7 +192,7 @@ public class ReusableMethods {
 
     public static void clickWithText(String text) {
 
-        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();
+        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();  //   //*[text()=' Nurse Notes']
     }
 
     public static boolean isElementVisible(WebElement element) {
@@ -229,4 +229,56 @@ public class ReusableMethods {
         WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public static void hoverOver(WebElement element) {
+
+        actions.moveToElement(element).perform();
+    }
+
+    /**
+     * Sends TAB key press
+     */
+    public static void pressTab() {
+
+        actions.sendKeys(Keys.TAB).perform();
+    }
+    public static void hardWait(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void closePopup(WebDriver driver) {
+        try {
+            WebElement closeButton = driver.findElement(By.xpath("//button[contains(@class, 'close')]"));
+            closeButton.click();
+        } catch (Exception e) {
+            System.err.println("Pop-up kapatılamadı: " + e.getMessage());
+        }
+    }
+
+    public static void closePopupIfPresent(WebDriver driver) {
+        try {
+
+            WebElement closeButton = driver.findElement(By.xpath("//button[contains(@class, 'close')]"));
+            if (closeButton.isDisplayed()) {
+                closeButton.click();
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Pop-up zaten görünür değil.");
+        }
+    }
+
+    public static void closePopupWithJS(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.querySelector('button.close').click();");
+    }
+
+
+
+
+
+
 }
