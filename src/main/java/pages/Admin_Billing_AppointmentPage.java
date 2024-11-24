@@ -10,7 +10,7 @@ public class Admin_Billing_AppointmentPage extends BasePage{
         PageFactory.initElements(driver, this);
 
         //uygar test
-    }
+    }//jklk
 
 
 }
