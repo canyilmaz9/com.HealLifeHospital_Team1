@@ -3,13 +3,10 @@ package pages;
 import config.ConfigReader;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import utils.ExcelCreator_seren;
 import utils.ExcelDataReader_Seren;
 import utils.ReusableMethods;
 
@@ -26,7 +23,8 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
+    ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
+
     @FindBy(xpath = "//*[@placeholder='Username']")
     public WebElement adminDoctorMail;
 
@@ -65,6 +63,84 @@ ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty
 
     @FindBy(xpath = "//a[normalize-space()='IPDN36']")
     public WebElement IPDN36Patient;
+
+    @FindBy(xpath = "//span[@id='select2-add_charge_type-container']")
+    public WebElement chargeTypeDDM;
+
+    @FindBy(xpath = "(//li[@class='select2-results__option'])[1]")
+    public WebElement IPDChartType;
+
+    @FindBy(xpath = "//span[@aria-labelledby='select2-charge_category-container']")
+    public WebElement chargeCategoryDDM;
+
+    @FindBy(xpath = "(//li[@class='select2-results__option'])[2]")
+    public WebElement admissionAndDischargeFromCC;
+    @FindBy(xpath = "//*[@id='select2-charge_id-container']")
+    public WebElement chargeNameDDM;
+
+    @FindBy(xpath = "//li[@class='select2-results__option']")
+    public  WebElement ipdChargeCN;
+    @FindBy(xpath = "(//*[@name='qty'])[1]")
+    public WebElement quantitiy;
+
+    @FindBy(xpath = "//*[@id='charge_date']")
+    public WebElement datePickerDDM;
+    @FindBy(xpath = "(//*[@class='close pupclose'])[1]")
+    public WebElement closePrescriptionPage;
+
+    @FindBy(xpath = "//span[@title='Next Month']")
+    public WebElement nextMonthDatepicker;
+
+    @FindBy(xpath = "//td[@data-day='12/04/2024']")
+    public WebElement pickDate;
+
+    @FindBy(xpath = "//a[@data-action='togglePicker']")  //  //a[@data-action='togglePicker']
+    public WebElement pickTime;
+
+    @FindBy(xpath = "//span[@class='timepicker-hour']")
+    public WebElement pickHourFromTable;
+
+    @FindBy(xpath = "(//td[@data-action='selectHour'])[10]")
+    public WebElement pickHour9;
+
+
+    @FindBy(xpath = "//span[@class='timepicker-minute']")
+    public WebElement pickMin;
+
+    @FindBy(xpath = "(//td[@data-action='selectMinute'])[9]")
+    public WebElement pickMin40;
+
+    @FindBy(xpath = "//button[@data-action='togglePeriod']")
+    public WebElement timePeriodAmOrPm;
+    @FindBy(xpath = "(//button[@name='charge_data'])[1]")
+    public WebElement addCharge;
+
+    @FindBy(xpath = "(//button[@name='charge_data'])[2]")
+    public WebElement saveCharge;
+
+
+
+
+
+
+    @FindBy(xpath = "//a[@title='Increment Hour']")
+    public WebElement incrementHour;
+
+    @FindBy(xpath = "//a[@title='Decrement Hour']")
+    public WebElement decrementHour;
+
+    @FindBy(xpath = "//a[@title='Increment Minute']")
+    public WebElement incrementMin;
+
+    @FindBy(xpath = "//a[@title='Decrement Minute']")
+    public WebElement decrementMin;
+
+
+
+
+
+
+
 
 
 
@@ -243,6 +319,50 @@ ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty
 
 
     }
+
+
+    public void addCharge(){
+        ReusableMethods.clickWithText(" Charges");
+        ReusableMethods.clickWithText(" Add Charges");
+        chargeTypeDDM.click();
+        ReusableMethods.hardWait(2);
+        IPDChartType.click();
+        ReusableMethods.hardWait(2);
+        chargeCategoryDDM.click();
+        ReusableMethods.hardWait(2);
+        admissionAndDischargeFromCC.click();
+        ReusableMethods.hardWait(2);
+        chargeNameDDM.click();
+        ReusableMethods.hardWait(2);
+        ipdChargeCN.click();
+        quantitiy.sendKeys("150");
+        ReusableMethods.hardWait(2);
+        datePickerDDM.click();
+        ReusableMethods.hardWait(2);
+        pickDate.click();
+        ReusableMethods.hardWait(2);
+        pickTime.click();
+        ReusableMethods.hardWait(2);
+        pickHourFromTable.click();
+        ReusableMethods.hardWait(2);
+        pickHour9.click();
+        ReusableMethods.hardWait(2);
+        pickMin.click();
+        ReusableMethods.hardWait(2);
+        pickMin40.click();
+        ReusableMethods.hardWait(2);
+        Assert.assertEquals("AM",timePeriodAmOrPm.getText());
+        ReusableMethods.hardWait(2);
+        addCharge.click();
+        ReusableMethods.hardWait(2);
+        saveCharge.click();
+
+
+
+    }
+
+
+
 
 
 

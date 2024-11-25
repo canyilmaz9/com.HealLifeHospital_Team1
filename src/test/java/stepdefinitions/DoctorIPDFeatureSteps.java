@@ -87,7 +87,7 @@ public class DoctorIPDFeatureSteps {
     }
     @Then("As a doctor, access the patient details page through the hamburger menu under the Credit Limit text.")
     public void as_a_doctor_access_the_patient_details_page_through_the_hamburger_menu_under_the_credit_limit_$_text() {
-  //   doctorIDPPage.clickOnHamburgerMenu();
+     doctorIDPPage.clickOnHamburgerMenu();
     }
     @Then("As a doctor, verify that the Add Patient button is accessible.")
     public void as_a_doctor_verify_that_the_add_patient_button_is_accessible() {
@@ -106,6 +106,7 @@ public class DoctorIPDFeatureSteps {
 
      @Given("Clicking on the IPD No Column Nu 3 navigates to the patient's details page.")
      public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page() {
+
      doctorIDPPage.IPDN36Patient.click();
 
      }
@@ -130,27 +131,33 @@ public class DoctorIPDFeatureSteps {
      public void the_prescription_page_allows_writing_new_prescriptions() {
      ReusableMethods.clickWithText(" Add Prescription");
      Assert.assertTrue(ReusableMethods.isTextVisible(" Add Prescription"));
+     doctorIDPPage.closePrescriptionPage.click();
      }
      @When("The Consultant Register page lists all consultant records.")
      public void the_consultant_register_page_lists_all_consultant_records() {
+     ReusableMethods.hardWait(2);
      ReusableMethods.clickWithText(" Consultant Register");
       Assert.assertTrue(ReusableMethods.isTextVisible(" Consultant Register"));
      }
      @When("The Lab Investigation page lists all lab investigations.")
      public void the_lab_investigation_page_lists_all_lab_investigations() {
+      ReusableMethods.hardWait(2);
+      ReusableMethods.clickWithText(" Lab Investigation");
       Assert.assertTrue(ReusableMethods.isTextVisible(" Lab Investigation"));
      }
      @When("The Operations page lists all patient operations.")
      public void the_operations_page_lists_all_patient_operations() {
+     ReusableMethods.clickWithText(" Operations");
       Assert.assertTrue(ReusableMethods.isTextVisible(" Operations"));
      }
      @When("The Charges page displays detailed patient charges.")
      public void the_charges_page_displays_detailed_patient_charges() {
+
       Assert.assertTrue(ReusableMethods.isTextVisible(" Charges"));
      }
      @When("The Charges page allows creating new charge records.")
      public void the_charges_page_allows_creating_new_charge_records() {
-
+      doctorIDPPage.addCharge();
      }
      @When("The Payment page lists all payment records.")
      public void the_payment_page_lists_all_payment_records() {
@@ -158,7 +165,9 @@ public class DoctorIPDFeatureSteps {
      }
      @When("The Payment page allows adding new payments.")
      public void the_payment_page_allows_adding_new_payments() {
-
+     ReusableMethods.hardWait(3);
+      ReusableMethods.clickWithText(" Payments");
+      Assert.assertTrue(ReusableMethods.isTextVisible(" Payments"));
      }
      @When("The Bed History page shows detailed bed history.")
      public void the_bed_history_page_shows_detailed_bed_history() {
