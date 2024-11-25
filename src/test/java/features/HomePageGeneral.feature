@@ -63,10 +63,14 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
     Then Patient verifies Case IDyi on the header
     Then Patient verifies Threatment History header
     Then Patient Timeline header
-
-
-
-
+Feature : US_006> Check doctors section informations work properly
+Scenario: US_006>TC_001 Verify names of 6 doctors, photographs and titles are visible on the homepage
+    Given User navitages to the homepage
+    When  User scolls down to the Our doctors section
+    And   User verifies that six doctors name are visible on the page
+    And   User verifies that the doctors photographs are visible on the page
+    And   User verifies that the doctors titles are visible on the page
+    Then  User quits the browser
 
 
 
