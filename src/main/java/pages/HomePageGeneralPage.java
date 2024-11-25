@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.security.PublicKey;
+import java.util.List;
 
 public class HomePageGeneralPage extends BasePage{
     public HomePageGeneralPage(WebDriver driver) {
@@ -131,6 +132,32 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@class='text-right noExport sorting']")
     public WebElement action;
 
+
+
+    //US06>Locations
+    @FindBy(xpath= "(//div[@class='team-member']")
+    public List<WebElement> doctors;
+
+    @FindBy(xpath= "(//div[@class='team-member']/p")
+    public List<WebElement> doctorTitles;
+
+    @FindBy(xpath= "(//div[@class='team-member']/img")
+    public List<WebElement> doctorPhotographs;
+
+    @FindBy(xpath= "(//h2[text()='Our Doctors']")
+    public List<WebElement> ourDoctorsTitle;
+
+    //US09>Locations
+    @FindBy(xpath= "(//p[text()='+1 502 755-3503']")
+    public WebElement contact;
+
+    @FindBy(xpath= "(//a[text()='info@heallifehospital.com']")
+    public WebElement Email;
+
+    @FindBy(xpath= "(//p[text()='25 Kings Street, CA']")
+    public WebElement Address;
+    }
+
     @FindBy (xpath = "(//*[@class='dataTables_filter'])[1]")
     public WebElement visitsSearchBox;
 
@@ -207,6 +234,7 @@ public class HomePageGeneralPage extends BasePage{
 
 
     //US_030>TC013 Locations
+
 
 
 

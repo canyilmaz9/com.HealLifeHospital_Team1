@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import config.ConfigReader;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,12 +10,22 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.HomePageGeneralPage;
-import utilities.ReusableMethods;
+import utils.JSUtilities;
+import utils.ReusableMethods;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.sound.midi.Soundbank;
 import java.security.Key;
+
 
 public class HomePageGeneralSteps {
 
@@ -22,6 +33,7 @@ public class HomePageGeneralSteps {
     WebDriver driver = Hooks.getDriver();
     HomePageGeneralPage homePageGeneralPage = new HomePageGeneralPage(driver);
     Actions actions = new Actions(driver);
+    Object WebElement;
 
     //US004_TC_001 StepDefintiions
 
@@ -556,11 +568,71 @@ public class HomePageGeneralSteps {
     @Then("verification of the Your Health page is clickable and forwarding correct link")
     public void verification_of_the_your_health_page_is_clickable_and_forwarding_correct_link() {
 
+
+    //US_006>TC001 Step Definitions
+    @Given("User navitages to the homepage")
+    public void user_navitages_to_the_homepage() throws InterruptedException {
+        String url = ConfigReader.getProperty("url");
+        driver.get(url);
+        Thread.sleep(3000);
+    }
+
+    @When("User scolls down to the Our doctors section")
+    public void user_scolls_down_to_the_our_doctors_section() {
+
+        JSUtilities.scrollToBottom(driver);
+    }
+
+    @And("User verifies that six doctors name are visible on the page")
+    public void user_verifies_that_six_doctors_name_are_visible_on_the_page() {
+
+    List<WebElement> nameElements = homePageGeneralPage.doctors;
+    for(WebElement element : nameElements ){
+        System.out.println("Bulunan isim :" + element.getText());
+        if(element.isDisplayed()){
+            System.out.println("The names are visible");
+        }else{
+            System.out.print("The names are not visible");
+        }
+    }
+    }
+
+    @And("User verifies that the doctors photographs are visible on the page")
+    public void user_verifies_that_the_doctors_photographs_are_visible_on_the_page() {
+        List<WebElement> images = homePageGeneralPage.doctorPhotographs;
+        for(int i=0; i<images.size(); i++){
+            WebElement img = images.get(i);
+            if(img.isDisplayed()){
+                System.out.println("Image" +(i+1) + "is visible.");
+            }else {
+                System.out.println("Image" +(i+1) + "is NOT visible");
+
+            }
+        }
+
+
+    }
+
+    @And("User verifies that the doctors titles are visible on the page")
+    public void user_verifies_that_the_doctors_titles_are_visible_on_the_page() {
+
+
+
+
+    }
+
+    @Then("User quits the browser")
+    public void user_quits_the_browser() {
+       driver.close();
+    }
+
+
     }
     @Then("verification of the Surgery page is clickable and forwarding correct link")
     public void verification_of_the_surgery_page_is_clickable_and_forwarding_correct_link() {
 
     }
+
 
 
 }
