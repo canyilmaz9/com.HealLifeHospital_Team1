@@ -18,7 +18,7 @@ import static utilities.ReusableMethods.bekle;
 public class HomePageHeaderSteps {
 
     private static final Logger logger = LogManager.getLogger(HomePageHeaderSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
 
     HomePageHeaderPage homePageHeaderPage = new HomePageHeaderPage(driver);
 

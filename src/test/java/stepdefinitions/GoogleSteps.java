@@ -13,7 +13,7 @@ import config.ConfigReader;
 public class GoogleSteps {
 
     private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
     GooglePage googlePage = new GooglePage(driver);
 
     @Given("User is on the Google homepage")

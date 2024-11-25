@@ -15,7 +15,7 @@ import utilities.ConfigReader;
 public class UserDashboardSteps {
 
     private static final Logger logger = LogManager.getLogger(HomePageHeaderSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
 
     HomePageHeaderPage homePageHeaderPage = new HomePageHeaderPage(driver);
     UserDashboardPage userDashboardPage = new UserDashboardPage(driver);

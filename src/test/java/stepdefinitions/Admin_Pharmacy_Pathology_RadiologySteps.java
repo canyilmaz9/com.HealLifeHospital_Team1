@@ -8,6 +8,6 @@ import pages.Admin_Pharmacy_Pathology_RadiologyPage;
 
 public class Admin_Pharmacy_Pathology_RadiologySteps {
     private static final Logger logger = LogManager.getLogger(Admin_Pharmacy_Pathology_RadiologySteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
     Admin_Pharmacy_Pathology_RadiologyPage admin_Pharmacy_Pathology_RadiologyPage = new Admin_Pharmacy_Pathology_RadiologyPage(driver);
 }

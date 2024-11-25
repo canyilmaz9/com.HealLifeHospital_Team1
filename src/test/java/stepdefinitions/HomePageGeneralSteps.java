@@ -19,7 +19,7 @@ import java.security.Key;
 public class HomePageGeneralSteps {
 
     private static final Logger logger = LogManager.getLogger(HomePageGeneralSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
     HomePageGeneralPage homePageGeneralPage = new HomePageGeneralPage(driver);
     Actions actions = new Actions(driver);
 
@@ -78,7 +78,7 @@ public class HomePageGeneralSteps {
     @When("Anasayfa slidebar altinda bulunan Insurance plans yazisinda read more butonuna tiklar ve Acilan sayfada insurance plans yazisinin oldugunu dogrular")
     public void anasayfa_slidebar_altinda_bulunan_insurance_plans_yazisinda_read_more_butonuna_tiklar() throws InterruptedException {
 
-        actions.sendKeys(org.openqa.selenium.Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
         homePageGeneralPage.insurancePlansReadMoreButonu.click();
         String expectedInsurancePlansKontrolYazisi = "Insurance Plans";
         String actualInsurancePlansKontrolYazisi = homePageGeneralPage.insurancePlansSayfasiKontrolYazisi.getText();

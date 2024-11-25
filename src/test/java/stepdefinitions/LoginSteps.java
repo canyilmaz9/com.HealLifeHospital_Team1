@@ -14,12 +14,12 @@ import utilities.ReusableMethods;
 
 public class LoginSteps {
 	private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
-	WebDriver driver = stepdefinitions.Hooks.getDriver();
+	WebDriver driver = Hooks.getDriver();
 	LoginPage loginPage = new LoginPage(driver);
 
 	@Given("the user is on the login page")
 	public void theUserIsOnTheLoginPage() {
-		driver.get(config.ConfigReader.getProperty("url"));
+		driver.get(ConfigReader.getProperty("url"));
 	}
 
 	@When("the user enters valid credentials")

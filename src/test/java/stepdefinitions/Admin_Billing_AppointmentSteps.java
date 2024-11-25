@@ -8,6 +8,6 @@ import pages.Admin_Billing_AppointmentPage;
 
 public class Admin_Billing_AppointmentSteps {
     private static final Logger logger = LogManager.getLogger(Admin_Billing_AppointmentSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
     Admin_Billing_AppointmentPage adminBillingAppointmentPage = new Admin_Billing_AppointmentPage(driver);
 }
