@@ -1,4 +1,5 @@
 package utils;
+import config.ConfigReader;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -6,12 +7,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelDataReader {
+public class ExcelDataReader_Seren {
 
 	private Workbook workbook;
 	private Sheet sheet;
 
-	public ExcelDataReader(String filePath, String sheetName) {
+	public ExcelDataReader_Seren(String filePath, String sheetName) {
 		try {
 			FileInputStream fis = new FileInputStream(new File(filePath));
 			workbook = new XSSFWorkbook(fis);
@@ -55,5 +56,38 @@ public class ExcelDataReader {
 		if (row == null) return 0; // Eğer satır boşsa
 		return row.getLastCellNum(); // Sütun sayısı
 	}
+
+	public static Workbook getWorkbook() {
+		Workbook workbook = null;
+		try {
+			// ConfigReader'dan Excel dosyasının yolunu al
+			String excelFilePath = ConfigReader.getProperty("testData");
+
+			// Excel dosyasını yükle
+			FileInputStream fis = new FileInputStream(excelFilePath);
+			workbook = new XSSFWorkbook(fis);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Excel file could not be loaded!");
+		}
+		return workbook;
+	}
+	public static int getSheetPageNumber(String sheetName) {
+		Workbook workbook = getWorkbook();
+
+		// Sheet'in indexini al
+		int sheetIndex = workbook.getSheetIndex(sheetName);
+
+		// Eğer sheet bulunamazsa -1 döndür
+		if (sheetIndex == -1) {
+			System.out.println("Sheet '" + sheetName + "' bulunamadı.");
+			return -1;
+		}
+
+		// 1-indexed sayfa numarasını döndür
+		return sheetIndex + 1;
+	}
+
+
 }
 

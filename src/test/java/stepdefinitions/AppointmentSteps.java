@@ -8,6 +8,6 @@ import pages.AppointmentPage;
 
 public class AppointmentSteps {
     private static final Logger logger = LogManager.getLogger(AppointmentSteps.class);
-    WebDriver driver = stepdefinitions.Hooks.getDriver();
+    WebDriver driver = Hooks.getDriver();
     AppointmentPage appointmentPage = new AppointmentPage(driver);
 }

@@ -4,3 +4,4 @@ Feature: Google Search Functionality
     Given User is on the Google homepage
     When User searches for "Java tutorials"
     Then Search results containing "Java" are displayed
+

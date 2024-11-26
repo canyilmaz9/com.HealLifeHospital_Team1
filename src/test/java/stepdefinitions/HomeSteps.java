@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import config.ConfigReader;
-import utilities.Driver;
+
 import utilities.ReusableMethods;
 
 import java.util.List;

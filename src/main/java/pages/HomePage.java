@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
